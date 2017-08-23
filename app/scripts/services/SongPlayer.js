@@ -27,6 +27,16 @@
     currentSong = song;
  };
 
+ /**
+*@function playSong
+*@desc Plays the selected song and changes icon to play button
+*@param {Object} song
+*/
+        var playSong = function(song) {
+            currentBuzzObject.play();
+            song.playing = true;
+        }
+
         SongPlayer.play = function(song) {
             if (currentSong !== song) {
                 setSong(song);
